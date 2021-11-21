@@ -1,0 +1,38 @@
+// Search Input Component Styles
+
+@import '../../Assets/Sass/variable.scss';
+
+.search {
+	position: relative;
+	width: 100%;
+	max-width: 830px;
+}
+
+.search__input {
+	width: 100%;
+	padding: 12px 23px;
+	@include fontAll(400, 16px, 20px);
+	background-color: #ebebeb;
+	color: #30384c;
+	border: 1px solid #ebebeb;
+	border-radius: 22px;
+
+	&:focus {
+		outline: none;
+		box-shadow: rgba(30, 247, 247, 0.25) 0px 0px 12px -2px,
+			rgba(24, 221, 188, 0.3) 0px 0px 7px -3px;
+	}
+}
+
+.search .search__icon {
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	display: block;
+}
+
+@media only screen and (max-width: 640px) {
+	.search {
+		display: none;
+	}
+}

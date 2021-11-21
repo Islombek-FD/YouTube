@@ -1,0 +1,21 @@
+// Recommended Section Component Styles
+
+@import '../../Assets/Sass/variable.scss';
+
+.recommended .container {
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.recommended__heading {
+	margin-top: 0;
+	margin-bottom: 30px;
+	@include fontAll(700, 26px, 33px);
+}
+
+.recommended__slider-controlles {
+	position: absolute;
+	top: 30px;
+	right: 150px;
+}

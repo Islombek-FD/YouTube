@@ -1,0 +1,53 @@
+// Aside Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.menu {
+	position: fixed;
+	top: 86px;
+	left: 0;
+	z-index: 2000;
+	flex-shrink: 0;
+	width: 235px;
+	height: calc(100vh - 86px);
+	padding: 30px 31px;
+	background-color: #fff;
+	overflow: auto;
+	@include transition;
+
+	&-close {
+		transform: translateX(-235px);
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #fff;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 10px;
+	}
+}
+
+.menu .nav {
+	margin-bottom: 58px;
+}
+
+.menu .subscriptions {
+	margin-bottom: 104px;
+}
+
+@media only screen and (max-width: 1160px) {
+	.menu {
+		position: absolute;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.menu {
+		display: none;
+	}
+}

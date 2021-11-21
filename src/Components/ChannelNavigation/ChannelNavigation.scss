@@ -1,0 +1,29 @@
+// Channel Navigation Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.channel-navigation {
+	display: flex;
+	column-gap: 204px;
+}
+
+.channel-navigation__list {
+	display: flex;
+	column-gap: 23px;
+	@include resetList;
+	margin-bottom: 54px;
+}
+
+.channel-navigation__link {
+	padding: 3px;
+	@include fontAll(400, 18px, 23px);
+	text-decoration: none;
+	color: #000;
+	border-bottom: 2px solid transparent;
+	@include transition;
+
+	&.active,
+	&:hover {
+		color: #ff0000;
+		border-color: #ff0000;
+	}
+}

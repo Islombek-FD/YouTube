@@ -1,0 +1,13 @@
+// Setting Component Styles
+
+@import '../../Assets/Sass/variable.scss';
+
+.setting {
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+}
+
+.setting__name {
+	@include fontAll(400, 16px, 20px);
+}

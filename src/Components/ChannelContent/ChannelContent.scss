@@ -1,0 +1,28 @@
+// Channel Content Coponent Styles
+
+@import '../../Assets/Sass/variable.scss';
+
+.channel-content {
+	width: calc(100% - 235px);
+	height: calc(100vh - 86px);
+	overflow: auto;
+	transform: translateX(235px);
+	@include transition;
+
+	&--fluid {
+		width: 100%;
+		transform: translateX(0);
+	}
+}
+
+@media only screen and (max-width: 1160px) {
+	.channel-content {
+		width: 100%;
+		transform: translateX(0);
+
+		&--fluid {
+			width: 100%;
+			transform: translateX(0);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+// Subscriptions Components Styles
+
+@import '../../Assets/Sass/variable.scss';
+
+.subscriptions__heading {
+	margin-top: 0;
+	margin-bottom: 30px;
+	@include fontAll(700, 18px, 23px);
+}
+
+.subscriptions__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 23px;
+	@include resetList;
+}
+
+.subscription__link {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	text-decoration: none;
+}
+
+.subscription__name {
+	margin: 0;
+	@include fontAll(400, 16px, 20px);
+	color: #898989;
+}

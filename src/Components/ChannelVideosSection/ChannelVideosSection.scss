@@ -1,0 +1,20 @@
+// Channel Videos Section Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.channel-videos .container {
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.channel-videos__heading {
+	margin-top: 0;
+	margin-bottom: 30px;
+	@include fontAll(700, 26px, 33px);
+}
+
+.channel-videos-slider__controlles {
+	position: absolute;
+	top: 35px;
+	right: 150px;
+}
