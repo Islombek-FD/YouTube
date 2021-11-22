@@ -20,7 +20,10 @@ function CitiesSection({ videos }) {
 		loop: true,
 		autoplayTimeout: 2000,
 		responsive: {
-			576: {
+			280: {
+				items: 1,
+			},
+			600: {
 				items: 2,
 			},
 			910: {
@@ -75,30 +78,34 @@ function CitiesSection({ videos }) {
 										<li
 											className='slider__item'
 											key={video.id}>
-											<img
-												className='slider__item-image'
-												src={video.thumbnailUrl}
-												alt='City img'
-												width='250'
-												height='150'
-											/>
+											<Link
+												className='slider__item-link'
+												to={`/channel/${video.id}`}>
+												<img
+													className='slider__item-image'
+													src={video.thumbnailUrl}
+													alt='City img'
+													width='250'
+													height='150'
+												/>
 
-											<h4 className='slider__item-title'>
-												{video.title
-													.split(' ')
-													.slice(0, 3)
-													.join(' ')}
-											</h4>
+												<h4 className='slider__item-title'>
+													{video.title
+														.split(' ')
+														.slice(0, 3)
+														.join(' ')}
+												</h4>
 
-											<div className='slider__item-views'>
-												<span className='slider__item-text'>
-													80k views · 3 days ago{' '}
-												</span>
+												<div className='slider__item-views'>
+													<span className='slider__item-text'>
+														80k views · 3 days ago{' '}
+													</span>
 
-												<span className='slider__item-text'>
-													Dollie Blair
-												</span>
-											</div>
+													<span className='slider__item-text'>
+														Dollie Blair
+													</span>
+												</div>
+											</Link>
 										</li>
 									))}
 							</TinySlider>

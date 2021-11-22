@@ -13,7 +13,7 @@ function AuthenticatedApp() {
 
 				<Route path='/channel/*' element={<Channel />} />
 
-				<Route path='/video' element={<Video />} />
+				<Route path='/channel/:id' element={<Video />} />
 			</Routes>
 		</>
 	);

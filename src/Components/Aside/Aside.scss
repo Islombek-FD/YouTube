@@ -27,8 +27,12 @@
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background: #888;
+		background: #fff;
 		border-radius: 10px;
+	}
+
+	&:hover::-webkit-scrollbar-thumb {
+		background: #888;
 	}
 }
 
@@ -43,6 +47,11 @@
 @media only screen and (max-width: 1160px) {
 	.menu {
 		position: absolute;
+		transform: translateX(-235px);
+
+		&-close {
+			transform: translateX(0);
+		}
 	}
 }
 

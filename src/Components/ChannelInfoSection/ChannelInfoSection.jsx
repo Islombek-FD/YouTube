@@ -13,6 +13,10 @@ function ChannelInfoSection() {
 			<section className='channel'>
 				<div className='container'>
 					<div className='channel__inner'>
+						<h2 className='visually-hidden'>
+							Channel section main content
+						</h2>
+
 						<div className='channel__inner-image'></div>
 
 						<div className='channel__has'>

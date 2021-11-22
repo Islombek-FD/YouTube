@@ -1,0 +1,101 @@
+// Videos List Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.videos-list {
+	width: 367px;
+	height: calc(100vh - 86px);
+}
+
+.videos-list__info {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	column-gap: 138px;
+	margin-bottom: 25px;
+}
+
+.videos-list__heading {
+	margin: 0;
+	@include fontAll(700, 36px, 36px);
+	color: #19202c;
+}
+
+.videos-list__autoplay {
+	text-transform: uppercase;
+	@include fontAll(700, 16px, 20px);
+	color: #19202c;
+}
+
+.videos-list__input-control {
+	@include transition;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 15px;
+		right: 0;
+		width: 44px;
+		height: 24px;
+		background-color: #ebebeb;
+		border-radius: 14px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		width: 24px;
+		height: 24px;
+		background-color: #e4140d;
+		border-radius: 50%;
+	}
+}
+
+.videos-list__input-checkbox {
+	display: none;
+
+	&:checked + .videos-list__input-control:after {
+		background-color: #2196f3;
+		right: 0;
+	}
+}
+
+.videos__playlist {
+	@include resetList;
+}
+
+.videos__playlist-item {
+	border-radius: 14px;
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+.videos__playlist-image {
+	margin-bottom: 13px;
+	border-radius: 14px;
+}
+
+.videos__playlist-title {
+	margin-top: 0;
+	margin-bottom: 9px;
+	color: #19202c;
+	@include fontAll(700, 26px, 33px);
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.videos__playlist-subscribed {
+	display: flex;
+	justify-content: space-between;
+}
+
+.videos__playlist-subscribed--count,
+.videos__playlist-subscribed--name {
+	@include fontAll(400, 18px, 23px);
+	color: #c2c2c2;
+}

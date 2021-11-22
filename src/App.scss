@@ -2,12 +2,17 @@
 
 @import './Assets/Sass/variable.scss';
 
-.container {
+.container,
+.container-lg {
 	width: 100%;
 	max-width: 1705px;
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.container-lg {
+	max-width: 1770px;
 }
 
 .visually-hidden {
@@ -25,6 +30,11 @@
 	@include resetList;
 }
 
+.slider__item-link {
+	text-decoration: none;
+	color: #19202c;
+}
+
 .slider__item-image {
 	width: 100%;
 	margin-bottom: 10px;
@@ -36,6 +46,10 @@
 	margin-top: 0;
 	margin-bottom: 4px;
 	@include fontAll(700, 16px, 20px);
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
 }
 
 .slider__item-views {

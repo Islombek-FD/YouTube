@@ -17,9 +17,9 @@ function SubscribeButton() {
 	return (
 		<>
 			<Button
+				className={`${classes.root} button`}
 				color='error'
-				variant='contained'
-				className={`${classes.root} button`}>
+				variant='contained'>
 				Subscribe 2.3m
 			</Button>
 		</>

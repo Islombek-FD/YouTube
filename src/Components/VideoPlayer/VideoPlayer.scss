@@ -1,0 +1,51 @@
+// Video Player Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.video-player {
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+}
+
+.video-player__image {
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 14px;
+}
+
+.video-player__title {
+	margin-top: 0;
+	margin-bottom: 4px;
+	@include fontAll(700, 36px, 45px);
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.video-player__subscribed {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.video-player__views-count {
+	@include fontAll(400, 20px, 25px);
+	color: #c2c2c2;
+}
+
+.video-player__icons {
+	display: flex;
+	@include resetList;
+	column-gap: 10px;
+	margin-left: auto;
+	margin-right: 40px;
+}
+
+.video-player__icon {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+	padding: 10px 20px;
+	background-color: #ebebeb;
+	border-radius: 20px;
+}

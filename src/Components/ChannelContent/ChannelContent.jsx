@@ -13,7 +13,7 @@ function ChannelContent() {
 		fetch(process.env.REACT_APP_PLACEHOLDER_API + '/photos')
 			.then((response) => response.json())
 			.then((data) => {
-				setVideos(data.splice(0, 20));
+				setVideos(data.splice(45, 60));
 			});
 	}, []);
 
