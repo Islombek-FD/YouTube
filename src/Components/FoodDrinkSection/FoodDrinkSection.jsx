@@ -88,7 +88,7 @@ function FoodDrinkSection({ videos }) {
 											key={video.id}>
 											<Link
 												className='slider__item-link'
-												to={`/channel/${video.id}`}>
+												to={`/video/${video.id}`}>
 												<img
 													className='slider__item-image'
 													src={video.thumbnailUrl}

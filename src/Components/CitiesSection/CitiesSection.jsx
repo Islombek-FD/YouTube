@@ -23,7 +23,7 @@ function CitiesSection({ videos }) {
 			280: {
 				items: 1,
 			},
-			600: {
+			576: {
 				items: 2,
 			},
 			910: {
@@ -80,7 +80,7 @@ function CitiesSection({ videos }) {
 											key={video.id}>
 											<Link
 												className='slider__item-link'
-												to={`/channel/${video.id}`}>
+												to={`/video/${video.id}`}>
 												<img
 													className='slider__item-image'
 													src={video.thumbnailUrl}

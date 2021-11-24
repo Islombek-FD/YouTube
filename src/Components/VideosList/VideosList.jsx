@@ -1,5 +1,6 @@
 import React from 'react';
 import './VideosList.scss';
+import { Link } from 'react-router-dom';
 
 function VideosList() {
 	const [videos, setVideos] = React.useState([]);
@@ -35,30 +36,34 @@ function VideosList() {
 							<li
 								className='videos__playlist-item'
 								key={video.id}>
-								<img
-									className='videos__playlist-image'
-									src={video.thumbnailUrl}
-									alt='Videos list img'
-									width='367'
-									height='213'
-								/>
+								<Link
+									className='videos__playlist-link'
+									to={`/video/${video.id}`}>
+									<img
+										className='videos__playlist-image'
+										src={video.thumbnailUrl}
+										alt='Videos list img'
+										width='367'
+										height='213'
+									/>
 
-								<h4 className='videos__playlist-title'>
-									{video.title
-										.split(' ')
-										.slice(0, 2)
-										.join(' ')}
-								</h4>
+									<h4 className='videos__playlist-title'>
+										{video.title
+											.split(' ')
+											.slice(0, 2)
+											.join(' ')}
+									</h4>
 
-								<div className='videos__playlist-subscribed'>
-									<span className='videos__playlist-subscribed--count'>
-										123k views
-									</span>
+									<div className='videos__playlist-subscribed'>
+										<span className='videos__playlist-subscribed--count'>
+											123k views
+										</span>
 
-									<span className='videos__playlist-subscribed--name'>
-										Dollie Blair
-									</span>
-								</div>
+										<span className='videos__playlist-subscribed--name'>
+											Dollie Blair
+										</span>
+									</div>
+								</Link>
 							</li>
 						))}
 				</ul>

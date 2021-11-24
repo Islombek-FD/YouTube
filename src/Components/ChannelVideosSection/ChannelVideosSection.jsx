@@ -1,6 +1,7 @@
 import React from 'react';
 import './ChannelVideosSection.scss';
 import TinySlider from 'tiny-slider-react';
+import { Link } from 'react-router-dom';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
@@ -61,30 +62,34 @@ function ChannelVideosSection({ videos }) {
 										<li
 											className='slider__item'
 											key={video.id}>
-											<img
-												className='slider__item-image'
-												src={video.thumbnailUrl}
-												alt=''
-												width='250'
-												height='150'
-											/>
+											<Link
+												className='slider__item-link'
+												to={`/video/${video.id}`}>
+												<img
+													className='slider__item-image'
+													src={video.thumbnailUrl}
+													alt=''
+													width='250'
+													height='150'
+												/>
 
-											<h4 className='slider__item-title'>
-												{video.title
-													.split(' ')
-													.slice(0, 3)
-													.join(' ')}
-											</h4>
+												<h4 className='slider__item-title'>
+													{video.title
+														.split(' ')
+														.slice(0, 3)
+														.join(' ')}
+												</h4>
 
-											<div className='slider__item-views'>
-												<span className='slider__item-text'>
-													13k views · 15 days ago{' '}
-												</span>
+												<div className='slider__item-views'>
+													<span className='slider__item-text'>
+														13k views · 15 days ago{' '}
+													</span>
 
-												<span className='slider__item-text'>
-													Food & Drink
-												</span>
-											</div>
+													<span className='slider__item-text'>
+														Food & Drink
+													</span>
+												</div>
+											</Link>
 										</li>
 									))}
 							</TinySlider>

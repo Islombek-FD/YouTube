@@ -1,12 +1,12 @@
 import Header from '../../Components/Header/Header.jsx';
-import VideoMain from '../../Components/VideoMain/VideoMain.jsx';
+import VideosMain from '../../Components/VideosMain/VideosMain.jsx';
 
 function Video() {
 	return (
 		<>
 			<Header />
 
-			<VideoMain />
+			<VideosMain />
 		</>
 	);
 }

@@ -1,0 +1,51 @@
+// Videos Content Section Component Styles
+@import '../../Assets/Sass/variable.scss';
+
+.videos-content {
+	height: calc(100vh - 85px);
+	padding: 20px 0 40px;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #fff;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 10px;
+	}
+}
+
+.videos-content__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 30px;
+	@include resetList;
+}
+
+.videos-content__link {
+	color: #000;
+	text-decoration: none;
+}
+
+.videos-content__image {
+	margin-bottom: 10px;
+	border-radius: 14px;
+}
+
+.videos-content__title {
+	margin-top: 0;
+	margin-bottom: 10px;
+	@include fontAll(700, 20px, 20px);
+}
+
+.videos-content__subscribe {
+	display: flex;
+	justify-content: space-between;
+	color: #c2c2c2;
+}

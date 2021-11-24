@@ -1,5 +1,6 @@
 import React from 'react';
 import './RecommendedSection.scss';
+import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
@@ -55,30 +56,34 @@ function RecommendedSection({ videos }) {
 										<li
 											className='slider__item'
 											key={video.id}>
-											<img
-												className='slider__item-image'
-												src={video.url}
-												alt=''
-												width='540'
-												height='250'
-											/>
+											<Link
+												className='slider__item-link'
+												to={`/video/${video.id}`}>
+												<img
+													className='slider__item-image'
+													src={video.url}
+													alt=''
+													width='540'
+													height='250'
+												/>
 
-											<h4 className='slider__item-title'>
-												{video.title
-													.split(' ')
-													.slice(0, 8)
-													.join(' ')}
-											</h4>
+												<h4 className='slider__item-title'>
+													{video.title
+														.split(' ')
+														.slice(0, 8)
+														.join(' ')}
+												</h4>
 
-											<div className='slider__item-views'>
-												<span className='slider__item-text'>
-													34k views · 5 months ago{' '}
-												</span>
+												<div className='slider__item-views'>
+													<span className='slider__item-text'>
+														34k views · 5 months ago{' '}
+													</span>
 
-												<span className='slider__item-text'>
-													Gussie French
-												</span>
-											</div>
+													<span className='slider__item-text'>
+														Gussie French
+													</span>
+												</div>
+											</Link>
 										</li>
 									))}
 							</TinySlider>
