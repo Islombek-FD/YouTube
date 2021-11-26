@@ -4,7 +4,7 @@ const Context = React.createContext();
 
 function Provider({ children }) {
 	const [state, setState] = React.useState(
-		window.localStorage.getItem('lang') || 'uz',
+		window.localStorage.getItem('lang') || 'en',
 	);
 
 	React.useEffect(() => {

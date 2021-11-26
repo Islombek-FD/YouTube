@@ -1,5 +1,8 @@
 import React from 'react';
 import './Header.scss';
+import '../../Assets/fa/css/fontawesome-all.min.css';
+
+import useLang from '../../Hooks/useLang.js';
 
 import HamburgerButton from '../HamburgerButton/HamburgerButton.jsx';
 import SearchInput from '../SearchInput/SearchInput.jsx';
@@ -13,6 +16,16 @@ import SearchIcon from '../Lib/SearchIcon.jsx';
 import UserpicImage from '../../Assets/Images/Userpic.png';
 
 function Header() {
+	const [lang, setLang] = useLang();
+
+	const handleSelectLang = (evt) => {
+		setLang(evt.target.value);
+	};
+
+	const hendleSelectTheme = (evt) => {
+		evt.target.classList.toggle('theme');
+	};
+
 	return (
 		<>
 			<header className='header'>
@@ -23,6 +36,24 @@ function Header() {
 				<SearchInput />
 
 				<SearchIcon />
+
+				<select
+					className='header__select'
+					value={lang}
+					onChange={handleSelectLang}>
+					<option value='en'>EN</option>
+					<option value='uz'>UZ</option>
+				</select>
+
+				<ul className='header__langs-icons' onClick={hendleSelectTheme}>
+					<li className='header__langs-icon'>
+						<i className='fab fa-telegram'></i>
+					</li>
+
+					<li className='header__langs-icon'>
+						<i className='fab fa-twitter'></i>
+					</li>
+				</ul>
 
 				<ul className='header__icons'>
 					<li className='header__icon'>

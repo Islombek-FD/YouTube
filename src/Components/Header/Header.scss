@@ -31,12 +31,37 @@
 	display: none;
 }
 
+.header__select {
+	margin-left: auto;
+	margin-right: 30px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.header__langs-icons {
+	display: flex;
+	@include resetList;
+	margin-right: 30px;
+}
+
+.header__langs-icon {
+	font-size: 22px;
+	cursor: pointer;
+
+	&:nth-child(2) {
+		display: none;
+	}
+}
+
 .header__icons {
 	display: flex;
 	align-items: center;
-	column-gap: 50px;
+	column-gap: 30px;
 	@include resetList;
-	margin-left: auto;
 	margin-right: 50px;
 }
 

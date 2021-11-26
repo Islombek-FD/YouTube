@@ -3,7 +3,7 @@ const content = {
 		home: {
 			nav: {
 				link1: 'Asosiy sahifa',
-				link2: 'Trending',
+				link2: 'Trendlar',
 				link3: 'Obunalar',
 				link4: 'Kutubxona',
 				link5: 'Tarix',

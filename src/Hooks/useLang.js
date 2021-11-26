@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Context } from '../Context/Theme.jsx';
+import { Context } from '../Context/Language.jsx';
 
-function useLang() {
+function useLang(setterOnly) {
 	const ctx = React.useContext(Context);
 
-	return [ctx.state, ctx.setState];
+	return setterOnly ? [ctx.setState] : [ctx.state, ctx.setState];
 }
 
 export default useLang;

@@ -1,6 +1,9 @@
 import './Nav.scss';
 import { NavLink } from 'react-router-dom';
 
+import content from '../../Localization/Content.js';
+import useLang from '../../Hooks/useLang.js';
+
 import HomeIcon from '../Lib/HomeIcon.jsx';
 import TrendingIcon from '../Lib/TrendingIcon.jsx';
 import SubscriptionsIcon from '../Lib/SubscriptionsIcon.jsx';
@@ -14,6 +17,8 @@ import GamesIcon from '../Lib/GamesIcon.jsx';
 import ArrowBottomIcon from '../Lib/ArrowBottomIcon.jsx';
 
 function Nav() {
+	const [lang] = useLang();
+
 	return (
 		<>
 			<nav className='nav'>
@@ -21,77 +26,77 @@ function Nav() {
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/'>
 							<HomeIcon />
-							Home
+							{content[lang].home.nav.link1}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/trending'>
 							<TrendingIcon />
-							Trending
+							{content[lang].home.nav.link2}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/subscriptions'>
 							<SubscriptionsIcon />
-							Subscriptions
+							{content[lang].home.nav.link3}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/library'>
 							<LibraryIcon />
-							Library
+							{content[lang].home.nav.link4}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/history'>
 							<HistoryIcon />
-							History
+							{content[lang].home.nav.link5}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/watch'>
 							<WatchIcon />
-							Watch later
+							{content[lang].home.nav.link6}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/favourites'>
 							<FavouritesIcon />
-							Favourites
+							{content[lang].home.nav.link7}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/like'>
 							<LikeIcon />
-							Liked videos
+							{content[lang].home.nav.link8}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/music'>
 							<MusicIcon />
-							Music
+							{content[lang].home.nav.link9}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/games'>
 							<GamesIcon />
-							Games
+							{content[lang].home.nav.link10}
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/show'>
 							<ArrowBottomIcon />
-							Show more
+							{content[lang].home.nav.link11}
 						</NavLink>
 					</li>
 				</ul>
