@@ -42,7 +42,7 @@
 
 @media only screen and (max-width: 640px) {
 	.channel-content {
-		max-height: calc(100vh - 150px);
+		padding-bottom: 86px;
 
 		&::-webkit-scrollbar {
 			width: 0;
