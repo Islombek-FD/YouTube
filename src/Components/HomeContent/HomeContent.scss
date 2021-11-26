@@ -47,5 +47,13 @@
 @media only screen and (max-width: 640px) {
 	.home-content {
 		height: calc(100vh - 150px);
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgb(255, 255, 255);
+		}
 	}
 }
