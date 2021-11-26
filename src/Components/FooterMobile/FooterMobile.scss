@@ -1,0 +1,46 @@
+// Footer Mobile Component Stles
+
+@import '../../Assets/Sass/variable.scss';
+
+.footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background-color: #fff;
+	border-top: 1px solid #f1f1f1;
+}
+
+.footer-mobile__list {
+	display: flex;
+	justify-content: space-between;
+	@include resetList;
+	padding: 12px 0;
+}
+
+.footer-mobile__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 6px;
+	@include fontAll(400, 0.625rem, 13px);
+	text-decoration: none;
+	color: #898989;
+	@include transition;
+
+	&.active,
+	&:hover {
+		color: #ff0000;
+	}
+
+	& svg path {
+		@include transition;
+	}
+
+	&.active svg path,
+	&:hover svg path {
+		opacity: 0.7;
+		fill: #ff0000;
+	}
+}
