@@ -23,7 +23,8 @@
 }
 
 .header .search {
-	margin-right: 30px;
+	position: relative;
+	transform: translateX(40%);
 }
 
 .header .search__icon {
@@ -41,6 +42,15 @@
 
 .header__icon {
 	display: flex;
+}
+
+@media only screen and (max-width: 1960px) {
+	.header .search {
+		position: relative;
+		left: 0%;
+		transform: translateX(0);
+		margin-right: 40px;
+	}
 }
 
 @media only screen and (max-width: 900px) {

@@ -8,7 +8,7 @@ function VideoSeeingInfo() {
 	return (
 		<>
 			<div className='video-seeing__info'>
-				<Link className='video-seeing__info-link' to='/channel'>
+				<Link className='video-seeing__info-link' to='/channel/home'>
 					<img
 						className='video-seeing__info-image'
 						src={FoodDrinkLogo}
@@ -26,6 +26,10 @@ function VideoSeeingInfo() {
 							Published on 14 Jun 2019
 						</span>
 
+						<span className='video-seeing__info-count'>
+							245K subscribed
+						</span>
+
 						<p className='video-seeing__info-description'>
 							A successful marketing plan relies heavily on the
 							pulling-power of advertising copy. Writing
@@ -37,13 +41,15 @@ function VideoSeeingInfo() {
 							consumer’s mood when they see your ad.
 						</p>
 
-						<button className='video-seeing__info-button'>
+						<button className='video-seeing__info-more'>
 							Show more
 						</button>
 					</div>
 				</Link>
 
 				<SubscribeButton />
+
+				<button className='video-seeing__info-button'>Subscribe</button>
 			</div>
 		</>
 	);

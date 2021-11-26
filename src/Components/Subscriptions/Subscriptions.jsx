@@ -18,7 +18,9 @@ function Subscriptions() {
 
 				<ul className='subscriptions__list'>
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User1}
 								alt='Subscribed user img'
@@ -33,7 +35,9 @@ function Subscriptions() {
 					</li>
 
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User2}
 								alt='Subscribed user img'
@@ -48,7 +52,9 @@ function Subscriptions() {
 					</li>
 
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User3}
 								alt='Subscribed user img'
@@ -63,7 +69,9 @@ function Subscriptions() {
 					</li>
 
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User4}
 								alt='Subscribed user img'
@@ -78,7 +86,9 @@ function Subscriptions() {
 					</li>
 
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User5}
 								alt='Subscribed user img'
@@ -93,7 +103,9 @@ function Subscriptions() {
 					</li>
 
 					<li className='subscription__item'>
-						<NavLink className='subscription__link' to='/channel'>
+						<NavLink
+							className='subscription__link'
+							to='/channel/home'>
 							<img
 								src={User6}
 								alt='Subscribed user img'

@@ -48,7 +48,7 @@ function FoodDrinkSection({ videos }) {
 					</h2>
 
 					<div className='food-drink__brend'>
-						<Link className='food-drink__link' to='/channel'>
+						<Link className='food-drink__link' to='/channel/home'>
 							<img
 								className='food-drink__image'
 								src={FoodDrinkLogo}

@@ -25,3 +25,13 @@
 	justify-content: space-between;
 	column-gap: 40px;
 }
+
+@media only screen and (max-width: 992px) {
+	.video-content .container-lg {
+		flex-direction: column;
+	}
+
+	.video-seeing {
+		margin-bottom: 20px;
+	}
+}

@@ -5,7 +5,8 @@ import { Button } from '@mui/material';
 
 const useStyles = makeStyles({
 	root: {
-		padding: '10px 20.5px !important',
+		width: '154px',
+		padding: '10px 15px !important',
 		borderRadius: '20px !important',
 		cursor: 'pointer',
 	},

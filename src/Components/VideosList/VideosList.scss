@@ -16,13 +16,13 @@
 
 .videos-list__heading {
 	margin: 0;
-	@include fontAll(700, 36px, 36px);
+	@include fontAll(700, 2.25rem, 36px);
 	color: #19202c;
 }
 
 .videos-list__autoplay {
 	text-transform: uppercase;
-	@include fontAll(700, 16px, 20px);
+	@include fontAll(700, 1rem, 20px);
 	color: #19202c;
 }
 
@@ -86,7 +86,7 @@
 	margin-top: 0;
 	margin-bottom: 9px;
 	color: #19202c;
-	@include fontAll(700, 26px, 33px);
+	@include fontAll(700, 1.625rem, 33px);
 
 	&::first-letter {
 		text-transform: uppercase;
@@ -100,6 +100,93 @@
 
 .videos__playlist-subscribed--count,
 .videos__playlist-subscribed--name {
-	@include fontAll(400, 18px, 23px);
+	@include fontAll(400, 1.125rem, 23px);
 	color: #c2c2c2;
+}
+
+@media only screen and (max-width: 992px) {
+	.videos-list {
+		width: 100%;
+	}
+
+	.videos-list__autoplay {
+		margin-left: auto;
+		margin-right: -80px;
+	}
+
+	.videos__playlist {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.videos__playlist-item {
+		width: 48%;
+	}
+
+	.videos__playlist-image {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.videos__playlist-item {
+		width: 100%;
+	}
+
+	.videos__playlist-image {
+		height: 250px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.videos-list__info {
+		align-items: center;
+		column-gap: 0;
+	}
+
+	.videos-list__heading {
+		@include fontAll(700, 1.25rem, 36px);
+	}
+
+	.videos-list__autoplay {
+		margin-left: auto;
+		margin-right: 50px;
+		@include fontAll(700, 0.625rem, 13px);
+	}
+
+	.videos-list__input-control::before,
+	.videos-list__input-control::after {
+		top: 5px;
+		width: 16px;
+		height: 16px;
+	}
+
+	.videos-list__input-control {
+		&::after {
+			top: 8px;
+			right: 15px;
+			width: 16px;
+			height: 16px;
+		}
+
+		&::before {
+			top: 8px;
+			width: 32px;
+			height: 16px;
+		}
+	}
+
+	.videos__playlist-image {
+		height: 180px;
+	}
+
+	.videos__playlist-title {
+		@include fontAll(700, 1rem, 20px);
+	}
+
+	.videos__playlist-subscribed--count,
+	.videos__playlist-subscribed--name {
+		@include fontAll(400, 0.8125rem, 16px);
+	}
 }

@@ -5,7 +5,7 @@
 .channel-recommended__heading {
 	margin-top: 0;
 	margin-bottom: 30px;
-	@include fontAll(400, 16px, 20px);
+	@include fontAll(400, 1rem, 20px);
 	color: #c2c2c2;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .channel-recommended__user-name {
-	@include fontAll(700, 18px, 23px);
+	@include fontAll(700, 1.125rem, 23px);
 	color: #19202c;
 }
 

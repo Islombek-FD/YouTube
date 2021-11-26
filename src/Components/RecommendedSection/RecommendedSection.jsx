@@ -18,7 +18,7 @@ function RecommendedSection({ videos }) {
 		loop: true,
 		autoplayTimeout: 2000,
 		responsive: {
-			800: {
+			576: {
 				items: 2,
 			},
 			1560: {

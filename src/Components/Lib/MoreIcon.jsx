@@ -2,6 +2,7 @@ function MoreIcon() {
 	return (
 		<>
 			<svg
+				className='more__icon'
 				width={28}
 				height={6}
 				viewBox='0 0 28 6'

@@ -31,11 +31,11 @@
 .food-drink__heading {
 	margin-top: 0;
 	margin-bottom: 0;
-	@include fontAll(700, 26px, 33px);
+	@include fontAll(700, 1.625rem, 33px);
 }
 
 .food-drink__text {
-	@include fontAll(400, 16px, 20px);
+	@include fontAll(400, 1rem, 20px);
 	color: #c2c2c2;
 	transform: translateY(3px);
 }

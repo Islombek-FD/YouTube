@@ -47,7 +47,7 @@ function CitiesSection({ videos }) {
 				<div className='container'>
 					<h2 className='visually-hidden'>Cities videos list</h2>
 
-					<Link className='city-slider__user' to='/channel'>
+					<Link className='city-slider__user' to='/channel/home'>
 						<img
 							src={DollieBlair}
 							alt='Dollie Blair img'

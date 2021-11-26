@@ -18,7 +18,7 @@ function ChannelVideosSection({ videos }) {
 		loop: true,
 		autoplayTimeout: 2000,
 		responsive: {
-			600: {
+			576: {
 				items: 2,
 			},
 			910: {

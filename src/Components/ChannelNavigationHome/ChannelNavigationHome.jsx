@@ -1,5 +1,6 @@
 import React from 'react';
 import './ChannelNavigationHome.scss';
+import { Link } from 'react-router-dom';
 
 import ChannelHasVideoImage from '../../Assets/Images/channel_found_video.png';
 
@@ -7,13 +8,15 @@ function ChannelNavigationHome() {
 	return (
 		<>
 			<div className='channel__video'>
-				<img
-					className='channel__video-image'
-					src={ChannelHasVideoImage}
-					alt='Channel has video img'
-					width='540'
-					height='250'
-				/>
+				<Link to='/video/1'>
+					<img
+						className='channel__video-image'
+						src={ChannelHasVideoImage}
+						alt='Channel has video img'
+						width='540'
+						height='250'
+					/>
+				</Link>
 
 				<div className='channel__video-info'>
 					<h3 className='channel__video-heading'>

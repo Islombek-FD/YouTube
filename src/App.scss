@@ -83,11 +83,15 @@
 	.slider__controlles {
 		right: 20px !important;
 	}
+
+	.slider__item-image {
+		height: 200px;
+	}
 }
 
 @media only screen and (max-width: 576px) {
 	.slider__item-image {
-		height: 250px;
+		height: 220px;
 	}
 }
 
