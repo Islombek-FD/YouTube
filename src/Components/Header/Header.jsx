@@ -3,6 +3,7 @@ import './Header.scss';
 import '../../Assets/fa/css/fontawesome-all.min.css';
 
 import useLang from '../../Hooks/useLang.js';
+import useTheme from '../../Hooks/useTheme.js';
 
 import HamburgerButton from '../HamburgerButton/HamburgerButton.jsx';
 import SearchInput from '../SearchInput/SearchInput.jsx';
@@ -17,18 +18,24 @@ import UserpicImage from '../../Assets/Images/Userpic.png';
 
 function Header() {
 	const [lang, setLang] = useLang();
+	const [theme, setTheme] = useTheme();
 
 	const handleSelectLang = (evt) => {
 		setLang(evt.target.value);
 	};
 
-	const hendleSelectTheme = (evt) => {
-		evt.target.classList.toggle('theme');
+	const hendleSelectTheme = () => {
+		if (theme === 'light') {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
 	};
 
 	return (
 		<>
-			<header className='header'>
+			<header
+				className={`${theme === 'dark' ? 'header dark' : 'header'}`}>
 				<HamburgerButton />
 
 				<LogoIcon />

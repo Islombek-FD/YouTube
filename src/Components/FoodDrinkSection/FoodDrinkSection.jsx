@@ -2,6 +2,7 @@ import React from 'react';
 import './FoodDrinkSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+import useTheme from '../../Hooks/useTheme.js';
 
 import SubscribeButton from '../SubscribeButton/SubscribeButton.jsx';
 
@@ -10,6 +11,8 @@ import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
 function FoodDrinkSection({ videos }) {
+	const [theme] = useTheme();
+
 	const settings = {
 		container: 'food-drink-slider__container',
 		controlsContainer: '.food-drink-slider__controlles',
@@ -41,7 +44,7 @@ function FoodDrinkSection({ videos }) {
 
 	return (
 		<>
-			<section className='food-drink'>
+			<section className={`food-drink ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<h2 className='visually-hidden'>
 						Food and Drink videos list
@@ -79,7 +82,10 @@ function FoodDrinkSection({ videos }) {
 					</div>
 
 					<div className='food-drink-slider__container'>
-						<ul className='slider__list'>
+						<ul
+							className={`slider__list ${
+								theme === 'dark' && 'dark'
+							}`}>
 							<TinySlider settings={settings}>
 								{videos &&
 									videos.map((video) => (

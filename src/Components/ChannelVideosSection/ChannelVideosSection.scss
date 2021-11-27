@@ -13,6 +13,10 @@
 	@include fontAll(700, 1.625rem, 33px);
 }
 
+.channel-videos.dark .channel-videos__heading {
+	color: #fff;
+}
+
 .channel-videos-slider__controlles {
 	position: absolute;
 	top: 35px;

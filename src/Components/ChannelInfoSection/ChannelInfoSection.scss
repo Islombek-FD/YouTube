@@ -41,6 +41,10 @@
 	color: #19202c;
 }
 
+.channel .channel__has-name {
+	color: #fff;
+}
+
 .channel__has-subscribers {
 	@include fontAll(400, 0.8125rem, 16px);
 	color: #c2c2c2;

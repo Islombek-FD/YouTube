@@ -2,11 +2,14 @@ import React from 'react';
 import './RecommendedSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+import useTheme from '../../Hooks/useTheme.js';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
 function RecommendedSection({ videos }) {
+	const [theme] = useTheme();
+
 	const settings = {
 		container: '.recommended__slider-container',
 		controlsContainer: '.recommended__slider-controlles',
@@ -32,7 +35,7 @@ function RecommendedSection({ videos }) {
 
 	return (
 		<>
-			<section className='recommended'>
+			<section className={`recommended ${theme === 'dark' && 'dark'}`}>
 				<h2 className='visually-hidden'>Recommended videos list</h2>
 
 				<div className='container'>
@@ -49,7 +52,10 @@ function RecommendedSection({ videos }) {
 					</div>
 
 					<div className='recommended__slider-container'>
-						<ul className='slider__list'>
+						<ul
+							className={`slider__list ${
+								theme === 'dark' && 'dark'
+							}`}>
 							<TinySlider settings={settings}>
 								{videos &&
 									videos.map((video) => (

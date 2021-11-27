@@ -1,13 +1,17 @@
 import './ChannelRecommended.scss';
+import useTheme from '../../Hooks/useTheme.js';
 
 import RecommendedChannelUser1 from '../../Assets/Images/recommended_user1.png';
 import RecommendedChannelUser2 from '../../Assets/Images/recommended_user2.png';
 import RecommendedChannelUser3 from '../../Assets/Images/recommended_user3.png';
 
 function ChannelRecommended() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<div className='channel-recommended'>
+			<div
+				className={`channel-recommended ${theme === 'dark' && 'dark'}`}>
 				<h4 className='channel-recommended__heading'>
 					Recommended channel
 				</h4>

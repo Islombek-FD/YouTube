@@ -29,6 +29,23 @@
 	}
 }
 
+.channel-navigation.dark .channel-navigation__link {
+	color: #fff;
+
+	svg path {
+		fill: #fff;
+	}
+
+	&.active,
+	&:hover {
+		color: #ff0000;
+
+		& svg path {
+			fill: #ff0000;
+		}
+	}
+}
+
 @media only screen and (max-width: 654px) {
 	.channel-navigation__item:nth-child(n + 4) {
 		display: none;

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import content from '../../Localization/Content.js';
 import useLang from '../../Hooks/useLang.js';
+import useTheme from '../../Hooks/useTheme.js';
 
 import HomeIcon from '../Lib/HomeIcon.jsx';
 import TrendingIcon from '../Lib/TrendingIcon.jsx';

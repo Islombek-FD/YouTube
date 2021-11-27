@@ -1,13 +1,16 @@
 import React from 'react';
 import './ChannelNavigationHome.scss';
 import { Link } from 'react-router-dom';
+import useTheme from '../../Hooks/useTheme.js';
 
 import ChannelHasVideoImage from '../../Assets/Images/channel_found_video.png';
 
 function ChannelNavigationHome() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<div className='channel__video'>
+			<div className={`channel__video ${theme === 'dark' && 'dark'}`}>
 				<Link to='/video/1'>
 					<img
 						className='channel__video-image'

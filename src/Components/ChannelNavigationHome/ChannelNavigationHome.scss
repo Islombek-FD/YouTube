@@ -18,12 +18,20 @@
 	color: #19202c;
 }
 
+.channel__video.dark .channel__video-heading {
+	color: #fff;
+}
+
 .channel__video-description {
 	max-width: 548px;
 	margin-top: 0;
 	margin-bottom: 30px;
 	@include fontAll(400, 1rem, 22px);
 	color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.channel__video.dark .channel__video-description {
+	color: #898989;
 }
 
 .channel__video-views {

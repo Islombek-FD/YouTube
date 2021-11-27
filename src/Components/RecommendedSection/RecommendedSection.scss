@@ -14,6 +14,10 @@
 	@include fontAll(700, 26px, 33px);
 }
 
+.recommended.dark .recommended__heading {
+	color: #fff;
+}
+
 .recommended__slider-controlles {
 	position: absolute;
 	top: 30px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './ChannelInfoSection.scss';
+import useTheme from '../../Hooks/useTheme.js';
 
 import ChannelNavigation from '../ChannelNavigation/ChannelNavigation.jsx';
 import BellIcon from '../Lib/BellIcon.jsx';
@@ -8,9 +9,11 @@ import SubscribeButton from '../SubscribeButton/SubscribeButton.jsx';
 import ChannelHasImage from '../../Assets/Images/chanel_user.png';
 
 function ChannelInfoSection() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<section className='channel'>
+			<section className={`channel ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<div className='channel__inner'>
 						<h2 className='visually-hidden'>

@@ -2,6 +2,7 @@ import React from 'react';
 import './CitiesSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+import useTheme from '../../Hooks/useTheme.js';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
@@ -9,6 +10,8 @@ import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 import DollieBlair from '../../Assets/Images/dollie_blair.png';
 
 function CitiesSection({ videos }) {
+	const [theme] = useTheme();
+
 	const settings = {
 		container: 'cities__slider-container',
 		controlsContainer: '.cities__slider-controlles',
@@ -43,7 +46,7 @@ function CitiesSection({ videos }) {
 
 	return (
 		<>
-			<section className='cities-slider'>
+			<section className={`cities-slider ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<h2 className='visually-hidden'>Cities videos list</h2>
 
@@ -71,7 +74,10 @@ function CitiesSection({ videos }) {
 					</div>
 
 					<div className='cities__slider-container'>
-						<ul className='slider__list'>
+						<ul
+							className={`slider__list ${
+								theme === 'dark' && 'dark'
+							}`}>
 							<TinySlider settings={settings}>
 								{videos &&
 									videos.map((video) => (

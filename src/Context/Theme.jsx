@@ -11,6 +11,12 @@ function Provider({ children }) {
 		window.localStorage.setItem('theme', state);
 	}, [state]);
 
+	if (state === 'dark') {
+		document.body.style.backgroundColor = '#17171E';
+	} else {
+		document.body.style.backgroundColor = '#fff';
+	}
+
 	return (
 		<Context.Provider value={{ state, setState }}>
 			{children}

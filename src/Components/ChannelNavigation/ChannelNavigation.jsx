@@ -1,15 +1,18 @@
 import React from 'react';
 import './ChannelNavigation.scss';
 import { Routes, Route, NavLink } from 'react-router-dom';
+import useTheme from '../../Hooks/useTheme.js';
 
 import SearchIcon from '../Lib/SearchIcon.jsx';
 import ChannelNavigationHome from '../ChannelNavigationHome/ChannelNavigationHome.jsx';
 import ChannelRecommended from '../ChannelRecommended/ChannelRecommended.jsx';
 
 function ChannelNavigation() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<div className='channel-navigation'>
+			<div className={`channel-navigation ${theme === 'dark' && 'dark'}`}>
 				<div className='channel-navigation__content'>
 					<ul className='channel-navigation__list'>
 						<li className='channel-navigation__item'>

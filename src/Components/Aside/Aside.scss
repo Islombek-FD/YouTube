@@ -12,7 +12,7 @@
 	padding: 30px 31px;
 	background-color: #fff;
 	overflow: auto;
-	@include transition;
+	transition: transform 0.3s ease;
 
 	&-close {
 		transform: translateX(-235px);
@@ -22,10 +22,6 @@
 		width: 6px;
 	}
 
-	&::-webkit-scrollbar-track {
-		background: #fff;
-	}
-
 	&::-webkit-scrollbar-thumb {
 		background: #fff;
 		border-radius: 10px;
@@ -33,6 +29,15 @@
 
 	&:hover::-webkit-scrollbar-thumb {
 		background: #888;
+	}
+
+	&.dark {
+		background-color: #17171e;
+		color: #898989;
+	}
+
+	&.dark svg path {
+		fill: #898989;
 	}
 }
 

@@ -18,8 +18,16 @@
 	margin-right: 25px;
 }
 
+.header.dark .hamburger path {
+	fill: #fff;
+}
+
 .header .logo__icon {
 	margin-right: 60px;
+}
+
+.header.dark .logo__icon path:last-child {
+	fill: #fff;
 }
 
 .header .search {
@@ -27,8 +35,17 @@
 	transform: translateX(40%);
 }
 
+.header.dark .search__input {
+	background-color: #17171e;
+	color: #fff;
+}
+
 .header .search__icon {
 	display: none;
+}
+
+.header.dark .search__icon path {
+	fill: #fff;
 }
 
 .header__select {

@@ -27,6 +27,10 @@
 	color: #19202c;
 }
 
+.channel-recommended.dark .channel-recommended__user-name {
+	color: #fff;
+}
+
 @media only screen and (max-width: 1800px) {
 	.channel-recommended {
 		display: none;
