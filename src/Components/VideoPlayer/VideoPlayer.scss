@@ -23,6 +23,10 @@
 	}
 }
 
+.video-player.dark .video-player__title {
+	color: #fff;
+}
+
 .video-player__subscribed {
 	display: flex;
 	justify-content: space-between;
@@ -51,6 +55,10 @@
 	padding: 10px 20px;
 	background-color: #ebebeb;
 	border-radius: 20px;
+}
+
+.video-player.dark .more__icon path {
+	fill: #898989;
 }
 
 @media only screen and (max-width: 1600px) {

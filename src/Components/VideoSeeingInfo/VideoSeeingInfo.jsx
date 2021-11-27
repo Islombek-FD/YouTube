@@ -1,13 +1,17 @@
 import './VideoSeeingInfo.scss';
 import { Link } from 'react-router-dom';
 
+import useTheme from '../../Hooks/useTheme.js';
+
 import SubscribeButton from '../SubscribeButton/SubscribeButton.jsx';
 import FoodDrinkLogo from '../../Assets/Images/food_drink.png';
 
 function VideoSeeingInfo() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<div className='video-seeing__info'>
+			<div className={`video-seeing__info ${theme === 'dark' && 'dark'}`}>
 				<Link className='video-seeing__info-link' to='/channel/home'>
 					<img
 						className='video-seeing__info-image'

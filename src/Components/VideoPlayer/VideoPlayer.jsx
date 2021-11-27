@@ -3,6 +3,8 @@ import './VideoPlayer.scss';
 
 import { useParams } from 'react-router-dom';
 
+import useTheme from '../../Hooks/useTheme.js';
+
 import HandGoodIcon from '../Lib/HandGoodIcon.jsx';
 import HandBadIcon from '../Lib/HandBadIcon.jsx';
 import ShareIcon from '../Lib/ShareIcon.jsx';
@@ -10,6 +12,7 @@ import MoreIcon from '../Lib/MoreIcon.jsx';
 
 function VideoPlayer() {
 	const { id } = useParams();
+	const [theme] = useTheme();
 	const [video, setVideo] = React.useState({});
 
 	React.useEffect(() => {
@@ -20,7 +23,7 @@ function VideoPlayer() {
 
 	return (
 		<>
-			<div className='video-player'>
+			<div className={`video-player ${theme === 'dark' && 'dark'}`}>
 				<img
 					className='video-player__image'
 					src={video.url}

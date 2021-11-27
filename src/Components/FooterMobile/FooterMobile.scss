@@ -22,8 +22,11 @@
 .footer-mobile__link {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	row-gap: 6px;
+	height: 40px;
+
 	@include fontAll(400, 0.625rem, 13px);
 	text-decoration: none;
 	color: #898989;

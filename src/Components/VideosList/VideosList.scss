@@ -26,6 +26,12 @@
 	color: #19202c;
 }
 
+.videos-list.dark .videos-list__heading,
+.videos-list.dark .videos-list__autoplay,
+.videos-list.dark .videos__playlist-title {
+	color: #fff;
+}
+
 .videos-list__input-control {
 	@include transition;
 

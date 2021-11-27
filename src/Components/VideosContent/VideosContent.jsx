@@ -1,8 +1,10 @@
 import React from 'react';
 import './VideosContent.scss';
 import { Link } from 'react-router-dom';
+import useTheme from '../../Hooks/useTheme.js';
 
 function VideosList() {
+	const [theme] = useTheme();
 	const [videos, setVideos] = React.useState([]);
 
 	React.useEffect(() => {
@@ -13,7 +15,7 @@ function VideosList() {
 
 	return (
 		<>
-			<section className='videos-content'>
+			<section className={`videos-content ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<ul className='videos-content__list'>
 						{videos &&

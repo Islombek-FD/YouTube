@@ -1,9 +1,11 @@
 import React from 'react';
 import './VideosList.scss';
 import { Link } from 'react-router-dom';
+import useTheme from '../../Hooks/useTheme.js';
 
 function VideosList() {
 	const [videos, setVideos] = React.useState([]);
+	const [theme] = useTheme();
 
 	React.useEffect(() => {
 		fetch(process.env.REACT_APP_PLACEHOLDER_API + '/photos')
@@ -13,7 +15,7 @@ function VideosList() {
 
 	return (
 		<>
-			<div className='videos-list'>
+			<div className={`videos-list ${theme === 'dark' && 'dark'}`}>
 				<div className='videos-list__info'>
 					<h3 className='videos-list__heading'>Next</h3>
 
