@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChannelVideosSection.scss';
-import TinySlider from 'tiny-slider-react';
 import { Link } from 'react-router-dom';
+import TinySlider from 'tiny-slider-react';
 
 import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
@@ -10,9 +10,18 @@ import useLang from '../../Hooks/useLang.js';
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
-function ChannelVideosSection({ videos }) {
+function ChannelVideosSection() {
 	const [theme] = useTheme();
 	const [lang] = useLang();
+	const [videos, setVideos] = React.useState([]);
+
+	React.useEffect(() => {
+		fetch(process.env.REACT_APP_PLACEHOLDER_API + '/photos')
+			.then((response) => response.json())
+			.then((data) => {
+				setVideos(data.splice(45, 60));
+			});
+	}, []);
 
 	const settings = {
 		container: '.channel-videos-slider__container',

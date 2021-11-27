@@ -23,14 +23,29 @@
 	right: 150px;
 }
 
+// Responsive Styles
 @media only screen and (max-width: 576px) {
 	.channel-videos .slider__item-image {
 		max-height: 250px;
+	}
+
+	.channel-videos__heading {
+		margin-bottom: 50px;
+		@include fontAll(700, 1.4rem, 33px);
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	.channel-videos .slider__item-image {
 		max-height: 200px;
+	}
+
+	.channel-videos__heading {
+		margin-bottom: 50px;
+		@include fontAll(700, 1.3rem, 33px);
+	}
+
+	.channel-videos-slider__controlles {
+		top: 70px;
 	}
 }

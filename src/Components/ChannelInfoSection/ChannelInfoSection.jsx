@@ -1,5 +1,6 @@
 import React from 'react';
 import './ChannelInfoSection.scss';
+
 import useTheme from '../../Hooks/useTheme.js';
 
 import ChannelNavigation from '../ChannelNavigation/ChannelNavigation.jsx';

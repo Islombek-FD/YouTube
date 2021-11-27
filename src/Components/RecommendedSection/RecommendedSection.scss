@@ -1,5 +1,4 @@
 // Recommended Section Component Styles
-
 @import '../../Assets/Sass/variable.scss';
 
 .recommended .container {
@@ -22,4 +21,15 @@
 	position: absolute;
 	top: 30px;
 	right: 150px;
+}
+
+// Responsive Styles
+@media only screen and (max-width: 400px) {
+	.recommended__heading {
+		margin-bottom: 50px;
+	}
+
+	.recommended__slider-controlles {
+		top: 65px;
+	}
 }

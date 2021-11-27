@@ -1,4 +1,3 @@
-import React from 'react';
 import './ChannelNavigation.scss';
 import { Routes, Route, NavLink } from 'react-router-dom';
 

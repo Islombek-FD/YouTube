@@ -1,4 +1,3 @@
-import React from 'react';
 import './FoodDrinkSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';

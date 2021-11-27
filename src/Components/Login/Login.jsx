@@ -2,9 +2,8 @@ import './Login.scss';
 import { makeStyles } from '@mui/styles';
 import { TextField, Button } from '@mui/material';
 
-import LogoIcon from '../../Components/Lib/LogoIcon.jsx';
-
 import useToken from '../../Hooks/useToken.js';
+import LogoIcon from '../../Components/Lib/LogoIcon.jsx';
 
 const useStyles = makeStyles({
 	loginButton: {

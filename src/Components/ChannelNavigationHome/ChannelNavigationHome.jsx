@@ -1,6 +1,6 @@
-import React from 'react';
 import './ChannelNavigationHome.scss';
 import { Link } from 'react-router-dom';
+
 import useTheme from '../../Hooks/useTheme.js';
 
 import ChannelHasVideoImage from '../../Assets/Images/channel_found_video.png';

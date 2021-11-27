@@ -40,7 +40,7 @@ const content = {
 		video: {
 			share: 'Ulashish',
 			food: 'Oziq-ovqat va ichimliklar',
-			next: 'Keyini',
+			next: 'Keyinigilari',
 			autoplay: 'Avtomatik',
 		},
 	},

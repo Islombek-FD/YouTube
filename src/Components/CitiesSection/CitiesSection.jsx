@@ -1,7 +1,7 @@
-import React from 'react';
 import './CitiesSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+
 import useTheme from '../../Hooks/useTheme.js';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';

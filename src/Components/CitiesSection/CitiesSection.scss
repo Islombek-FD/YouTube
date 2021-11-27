@@ -1,5 +1,4 @@
 // Cities Component Styles
-
 @import '../../Assets/Sass/variable.scss';
 
 .cities-slider .container {
@@ -26,8 +25,19 @@
 	color: #fff;
 }
 
-.cities-slider .cities__slider-controlles {
+.cities__slider-controlles {
 	position: absolute;
 	top: 54px;
 	right: 150px;
+}
+
+// Responsive Styles
+@media only screen and (max-width: 400px) {
+	.city-slider__user {
+		margin-bottom: 50px;
+	}
+
+	.cities__slider-controlles {
+		top: 80px;
+	}
 }

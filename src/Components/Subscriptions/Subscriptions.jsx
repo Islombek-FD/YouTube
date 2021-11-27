@@ -1,10 +1,9 @@
 import './Subscriptions.scss';
-
 import { NavLink } from 'react-router-dom';
+
 import content from '../../Localization/Content.js';
 import useLang from '../../Hooks/useLang.js';
 
-// Subscriptions Users Image
 import User1 from '../../Assets/Images/user1.png';
 import User2 from '../../Assets/Images/user2.png';
 import User3 from '../../Assets/Images/user3.png';

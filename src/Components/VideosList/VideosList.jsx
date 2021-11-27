@@ -25,19 +25,21 @@ function VideosList() {
 						{content[lang].video.next}
 					</h3>
 
-					<strong className='videos-list__autoplay'>
-						{content[lang].video.autoplay}
-					</strong>
+					<div className='videos-list__autoplay'>
+						<strong className='videos-list__autoplay-text'>
+							{content[lang].video.autoplay}
+						</strong>
 
-					<input
-						className='videos-list__input-checkbox'
-						type='checkbox'
-						id='autoplay'
-					/>
+						<input
+							className='videos-list__input-checkbox'
+							type='checkbox'
+							id='autoplay'
+						/>
 
-					<label
-						className='videos-list__input-control'
-						htmlFor='autoplay'></label>
+						<label
+							className='videos-list__input-control'
+							htmlFor='autoplay'></label>
+					</div>
 				</div>
 
 				<ul className='videos__playlist'>

@@ -1,5 +1,4 @@
 // Home Content Component Styles
-
 @import '../../Assets/Sass/variable.scss';
 
 .home-content {
@@ -32,6 +31,7 @@
 	}
 }
 
+// Responsive Styles
 @media only screen and (max-width: 1160px) {
 	.home-content {
 		width: 100%;

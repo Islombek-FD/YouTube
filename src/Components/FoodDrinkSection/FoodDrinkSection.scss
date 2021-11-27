@@ -55,6 +55,7 @@
 	right: 150px;
 }
 
+// Responsive Styles
 @media only screen and (max-width: 1240px) {
 	.food-drink__text {
 		display: none;
@@ -68,5 +69,15 @@
 @media only screen and (max-width: 576px) {
 	.food-drink .button {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.food-drink__link {
+		margin-bottom: 10px;
+	}
+
+	.food-drink-slider__controlles {
+		top: 80px;
 	}
 }

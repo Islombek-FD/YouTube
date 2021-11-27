@@ -1,6 +1,4 @@
-import React from 'react';
 import './Header.scss';
-import '../../Assets/fa/css/fontawesome-all.min.css';
 
 import useLang from '../../Hooks/useLang.js';
 import useTheme from '../../Hooks/useTheme.js';

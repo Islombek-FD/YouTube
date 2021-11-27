@@ -1,4 +1,3 @@
-import React from 'react';
 import './HamburgerButton.scss';
 
 import useAside from '../../Hooks/useAside.js';
