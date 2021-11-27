@@ -3,7 +3,9 @@ import './VideoPlayer.scss';
 
 import { useParams } from 'react-router-dom';
 
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import HandGoodIcon from '../Lib/HandGoodIcon.jsx';
 import HandBadIcon from '../Lib/HandBadIcon.jsx';
@@ -13,6 +15,7 @@ import MoreIcon from '../Lib/MoreIcon.jsx';
 function VideoPlayer() {
 	const { id } = useParams();
 	const [theme] = useTheme();
+	const [lang] = useLang();
 	const [video, setVideo] = React.useState({});
 
 	React.useEffect(() => {
@@ -49,7 +52,8 @@ function VideoPlayer() {
 						</li>
 
 						<li className='video-player__icon'>
-							<ShareIcon /> Share
+							<ShareIcon />
+							{content[lang].video.share}
 						</li>
 					</ul>
 

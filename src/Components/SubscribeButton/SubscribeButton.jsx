@@ -3,9 +3,12 @@ import '../../Assets/Sass/variable.scss';
 import { makeStyles } from '@mui/styles';
 import { Button } from '@mui/material';
 
+import content from '../../Localization/Content.js';
+import useLang from '../../Hooks/useLang.js';
+
 const useStyles = makeStyles({
 	root: {
-		width: '154px',
+		width: 'auto',
 		padding: '10px 15px !important',
 		borderRadius: '20px !important',
 		cursor: 'pointer',
@@ -14,6 +17,7 @@ const useStyles = makeStyles({
 
 function SubscribeButton() {
 	const classes = useStyles();
+	const [lang] = useLang();
 
 	return (
 		<>
@@ -21,7 +25,7 @@ function SubscribeButton() {
 				className={`${classes.root} button`}
 				color='error'
 				variant='contained'>
-				Subscribe 2.3m
+				{content[lang].home.subscribe}
 			</Button>
 		</>
 	);

@@ -1,6 +1,8 @@
 import './Subscriptions.scss';
 
 import { NavLink } from 'react-router-dom';
+import content from '../../Localization/Content.js';
+import useLang from '../../Hooks/useLang.js';
 
 // Subscriptions Users Image
 import User1 from '../../Assets/Images/user1.png';
@@ -11,10 +13,14 @@ import User5 from '../../Assets/Images/user5.png';
 import User6 from '../../Assets/Images/user6.png';
 
 function Subscriptions() {
+	const [lang] = useLang();
+
 	return (
 		<>
 			<div className='subscriptions'>
-				<h3 className='subscriptions__heading'>Subscriptions</h3>
+				<h3 className='subscriptions__heading'>
+					{content[lang].home.subscriptions}
+				</h3>
 
 				<ul className='subscriptions__list'>
 					<li className='subscription__item'>

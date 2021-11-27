@@ -1,5 +1,8 @@
 const content = {
 	uz: {
+		header: {
+			search: 'Qidiruv',
+		},
 		home: {
 			nav: {
 				link1: 'Asosiy sahifa',
@@ -15,12 +18,12 @@ const content = {
 				link11: "Ko'proq ko'rsatish",
 			},
 			subscriptions: 'Obunalar',
-			setting: 'Sozlama',
+			settings: 'Sozlamalar',
 			search: 'Qidiruv',
-			recommended: 'Tavsiya etilgan',
+			recommended: 'Tavsiya etiladiganlar',
 			food: 'Oziq-ovqat va ichimliklar',
 			recommendedchannel: 'Siz uchun tavsiya etilgan kanal',
-			subscribe: "Obuna bo'ling",
+			subscribe: 'Obunachilar 2.3m',
 		},
 		channel: {
 			menu: {
@@ -31,14 +34,20 @@ const content = {
 				link5: 'Munozara',
 				link6: 'Haqida',
 			},
+			recommended: 'Tavsiya etiladigan kanallar',
+			videos: 'videolari',
 		},
 		video: {
 			share: 'Ulashish',
-			next: 'Keyingi',
+			food: 'Oziq-ovqat va ichimliklar',
+			next: 'Keyini',
 			autoplay: 'Avtomatik',
 		},
 	},
 	en: {
+		header: {
+			search: 'Search',
+		},
 		home: {
 			nav: {
 				link1: 'Home',
@@ -54,12 +63,12 @@ const content = {
 				link11: 'Show more',
 			},
 			subscriptions: 'Subscriptions',
-			setting: 'Setting',
+			settings: 'Setting',
 			search: 'Search',
 			recommended: 'Recommended',
 			food: 'Food & Drink',
 			recommendedchannel: 'Recommended channel for you',
-			subscribe: 'Subscribe',
+			subscribe: 'Subscribe 2.3m',
 		},
 		channel: {
 			menu: {
@@ -70,9 +79,12 @@ const content = {
 				link5: 'Discussion',
 				link6: 'About',
 			},
+			recommended: 'Recommended channel',
+			videos: 'videos',
 		},
 		video: {
 			share: 'Share',
+			food: 'Food & Drink',
 			next: 'Next',
 			autoplay: 'Autoplay',
 		},

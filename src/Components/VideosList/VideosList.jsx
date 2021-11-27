@@ -1,11 +1,15 @@
 import React from 'react';
 import './VideosList.scss';
 import { Link } from 'react-router-dom';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 function VideosList() {
-	const [videos, setVideos] = React.useState([]);
 	const [theme] = useTheme();
+	const [lang] = useLang();
+	const [videos, setVideos] = React.useState([]);
 
 	React.useEffect(() => {
 		fetch(process.env.REACT_APP_PLACEHOLDER_API + '/photos')
@@ -17,9 +21,13 @@ function VideosList() {
 		<>
 			<div className={`videos-list ${theme === 'dark' && 'dark'}`}>
 				<div className='videos-list__info'>
-					<h3 className='videos-list__heading'>Next</h3>
+					<h3 className='videos-list__heading'>
+						{content[lang].video.next}
+					</h3>
 
-					<strong className='videos-list__autoplay'>Autoplay</strong>
+					<strong className='videos-list__autoplay'>
+						{content[lang].video.autoplay}
+					</strong>
 
 					<input
 						className='videos-list__input-checkbox'

@@ -2,13 +2,17 @@ import React from 'react';
 import './RecommendedSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
 function RecommendedSection({ videos }) {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	const settings = {
 		container: '.recommended__slider-container',
@@ -39,7 +43,9 @@ function RecommendedSection({ videos }) {
 				<h2 className='visually-hidden'>Recommended videos list</h2>
 
 				<div className='container'>
-					<h3 className='recommended__heading'>Recommended</h3>
+					<h3 className='recommended__heading'>
+						{content[lang].home.recommended}
+					</h3>
 
 					<div className='recommended__slider-controlles slider__controlles'>
 						<button className='slider__controlles-button prev'>

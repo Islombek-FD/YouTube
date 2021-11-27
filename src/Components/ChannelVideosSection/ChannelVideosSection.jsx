@@ -2,13 +2,17 @@ import React from 'react';
 import './ChannelVideosSection.scss';
 import TinySlider from 'tiny-slider-react';
 import { Link } from 'react-router-dom';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import ArrowLeftIcon from '../Lib/ArrowLeftIcon.jsx';
 import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
 function ChannelVideosSection({ videos }) {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	const settings = {
 		container: '.channel-videos-slider__container',
@@ -44,7 +48,7 @@ function ChannelVideosSection({ videos }) {
 			<section className={`channel-videos ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<h2 className='channel-videos__heading'>
-						Margaret Phelps videos
+						Margaret Phelps {content[lang].channel.videos}
 					</h2>
 
 					<div className='channel-videos-slider__controlles slider__controlles'>

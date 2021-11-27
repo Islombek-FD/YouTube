@@ -1,9 +1,13 @@
 import React from 'react';
 import './SearchInput.scss';
 
+import content from '../../Localization/Content.js';
+import useLang from '../../Hooks/useLang.js';
+
 import SearchIcon from '../Lib/SearchIcon.jsx';
 
 function SearchInput() {
+	const [lang] = useLang();
 	const elInput = React.useRef();
 
 	const inputFocus = () => elInput.current.focus();
@@ -14,7 +18,7 @@ function SearchInput() {
 				className='search__input'
 				ref={elInput}
 				type='text'
-				placeholder='Search'
+				placeholder={content[lang].header.search}
 			/>
 
 			<SearchIcon inputFocus={inputFocus} />

@@ -1,13 +1,16 @@
 import './VideoSeeingInfo.scss';
 import { Link } from 'react-router-dom';
 
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import SubscribeButton from '../SubscribeButton/SubscribeButton.jsx';
 import FoodDrinkLogo from '../../Assets/Images/food_drink.png';
 
 function VideoSeeingInfo() {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	return (
 		<>
@@ -23,7 +26,7 @@ function VideoSeeingInfo() {
 
 					<div className='video-seeing__info-text'>
 						<h3 className='video-seeing__info-heading'>
-							Food & Drink
+							{content[lang].video.food}
 						</h3>
 
 						<span className='video-seeing__info-date'>

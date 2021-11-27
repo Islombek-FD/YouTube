@@ -1,5 +1,8 @@
 import './ChannelRecommended.scss';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import RecommendedChannelUser1 from '../../Assets/Images/recommended_user1.png';
 import RecommendedChannelUser2 from '../../Assets/Images/recommended_user2.png';
@@ -7,13 +10,14 @@ import RecommendedChannelUser3 from '../../Assets/Images/recommended_user3.png';
 
 function ChannelRecommended() {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	return (
 		<>
 			<div
 				className={`channel-recommended ${theme === 'dark' && 'dark'}`}>
 				<h4 className='channel-recommended__heading'>
-					Recommended channel
+					{content[lang].channel.recommended}
 				</h4>
 
 				<ul className='channel-recommended__users'>

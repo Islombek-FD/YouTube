@@ -2,7 +2,10 @@ import React from 'react';
 import './FoodDrinkSection.scss';
 import { Link } from 'react-router-dom';
 import TinySlider from 'tiny-slider-react';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import SubscribeButton from '../SubscribeButton/SubscribeButton.jsx';
 
@@ -12,6 +15,7 @@ import ArrowRightIcon from '../Lib/ArrowRightIcon.jsx';
 
 function FoodDrinkSection({ videos }) {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	const settings = {
 		container: 'food-drink-slider__container',
@@ -60,12 +64,12 @@ function FoodDrinkSection({ videos }) {
 								height='50'
 							/>
 
-							<strong className='food-drink__heading'>
-								Food & Drink
-							</strong>
+							<h3 className='food-drink__heading'>
+								{content[lang].home.food}
+							</h3>
 						</Link>
 						<span className='food-drink__text'>
-							Recommended channel for you
+							{content[lang].home.recommendedchannel}
 						</span>
 
 						<SubscribeButton />

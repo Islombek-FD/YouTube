@@ -1,7 +1,10 @@
 import React from 'react';
 import './ChannelNavigation.scss';
 import { Routes, Route, NavLink } from 'react-router-dom';
+
+import content from '../../Localization/Content.js';
 import useTheme from '../../Hooks/useTheme.js';
+import useLang from '../../Hooks/useLang.js';
 
 import SearchIcon from '../Lib/SearchIcon.jsx';
 import ChannelNavigationHome from '../ChannelNavigationHome/ChannelNavigationHome.jsx';
@@ -9,6 +12,7 @@ import ChannelRecommended from '../ChannelRecommended/ChannelRecommended.jsx';
 
 function ChannelNavigation() {
 	const [theme] = useTheme();
+	const [lang] = useLang();
 
 	return (
 		<>
@@ -19,7 +23,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='home'>
-								Home
+								{content[lang].channel.menu.link1}
 							</NavLink>
 						</li>
 
@@ -27,7 +31,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='videos'>
-								Videos
+								{content[lang].channel.menu.link2}
 							</NavLink>
 						</li>
 
@@ -35,7 +39,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='playlists'>
-								Playlists
+								{content[lang].channel.menu.link3}
 							</NavLink>
 						</li>
 
@@ -43,7 +47,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='channels'>
-								Channels
+								{content[lang].channel.menu.link4}
 							</NavLink>
 						</li>
 
@@ -51,7 +55,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='discussion'>
-								Discussion
+								{content[lang].channel.menu.link5}
 							</NavLink>
 						</li>
 
@@ -59,7 +63,7 @@ function ChannelNavigation() {
 							<NavLink
 								className='channel-navigation__link'
 								to='about'>
-								About
+								{content[lang].channel.menu.link6}
 							</NavLink>
 						</li>
 
