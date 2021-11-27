@@ -10,6 +10,10 @@
 	display: none;
 	background-color: #fff;
 	border-top: 1px solid #f1f1f1;
+
+	&.dark {
+		background-color: #17171e;
+	}
 }
 
 .footer-mobile__list {
@@ -39,6 +43,25 @@
 
 	& svg path {
 		@include transition;
+	}
+
+	&.active svg path,
+	&:hover svg path {
+		opacity: 0.7;
+		fill: #ff0000;
+	}
+}
+
+.footer.dark .footer-mobile__link {
+	color: #fff;
+
+	&.active,
+	&:hover {
+		color: #ff0000;
+	}
+
+	& svg path {
+		fill: #898989;
 	}
 
 	&.active svg path,

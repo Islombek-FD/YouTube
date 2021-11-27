@@ -1,5 +1,6 @@
 import './FooterMobile.scss';
 import { NavLink } from 'react-router-dom';
+import useTheme from '../../Hooks/useTheme.js';
 
 import HomeIcon from '../Lib/HomeIcon.jsx';
 import TrendingIcon from '../Lib/TrendingIcon.jsx';
@@ -7,9 +8,11 @@ import SubscriptionsIcon from '../Lib/SubscriptionsIcon.jsx';
 import LibraryIcon from '../Lib/LibraryIcon.jsx';
 
 function FooterMobile() {
+	const [theme] = useTheme();
+
 	return (
 		<>
-			<footer className='footer'>
+			<footer className={`footer ${theme === 'dark' && 'dark'}`}>
 				<div className='container'>
 					<ul className='footer-mobile__list'>
 						<li className='footer-mobile__item'>
