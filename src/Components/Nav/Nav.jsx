@@ -27,77 +27,99 @@ function Nav() {
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/'>
 							<HomeIcon />
-							{content[lang].home.nav.link1}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link1}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/trending'>
 							<TrendingIcon />
-							{content[lang].home.nav.link2}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link2}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/subscriptions'>
 							<SubscriptionsIcon />
-							{content[lang].home.nav.link3}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link3}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/library'>
 							<LibraryIcon />
-							{content[lang].home.nav.link4}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link4}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/history'>
 							<HistoryIcon />
-							{content[lang].home.nav.link5}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link5}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/watch'>
 							<WatchIcon />
-							{content[lang].home.nav.link6}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link6}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/favourites'>
 							<FavouritesIcon />
-							{content[lang].home.nav.link7}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link7}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/like'>
 							<LikeIcon />
-							{content[lang].home.nav.link8}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link8}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/music'>
 							<MusicIcon />
-							{content[lang].home.nav.link9}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link9}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/games'>
 							<GamesIcon />
-							{content[lang].home.nav.link10}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link10}
+							</span>
 						</NavLink>
 					</li>
 
 					<li className='nav__item'>
 						<NavLink className='nav__link' to='/show'>
 							<ArrowBottomIcon />
-							{content[lang].home.nav.link11}
+							<span className='nav__link-text'>
+								{content[lang].home.nav.link11}
+							</span>
 						</NavLink>
 					</li>
 				</ul>

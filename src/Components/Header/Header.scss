@@ -59,9 +59,12 @@
 	}
 }
 
-.header__langs-icons {
-	display: flex;
-	@include resetList;
+.header.dark .header__select {
+	background-color: #17171e;
+	color: #fff;
+}
+
+.header .theme__icon {
 	margin-right: 30px;
 }
 
@@ -95,9 +98,21 @@
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1140px) {
 	.header__icons {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.header .search__icon {
+		display: block;
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.header__select {
+		margin-left: 20px;
 	}
 }
 
@@ -117,6 +132,17 @@
 	.header .search__icon {
 		display: block;
 		margin-left: auto;
-		margin-right: 24px;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.header__select {
+		display: none;
+	}
+
+	.header .theme__icon {
+		margin-left: 15px;
+		margin-right: 15px;
 	}
 }

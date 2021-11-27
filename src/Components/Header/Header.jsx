@@ -10,6 +10,7 @@ import SearchInput from '../SearchInput/SearchInput.jsx';
 
 import LogoIcon from '../Lib/LogoIcon.jsx';
 import CamcorderIcon from '../Lib/CamcorderIcon.jsx';
+import ThemeIcon from '../Lib/ThemeIcon.jsx';
 import CombinedShapeIcon from '../Lib/CombinedShapeIcon.jsx';
 import BellIcon from '../Lib/BellIcon.jsx';
 import SearchIcon from '../Lib/SearchIcon.jsx';
@@ -52,15 +53,7 @@ function Header() {
 					<option value='uz'>UZ</option>
 				</select>
 
-				<ul className='header__langs-icons' onClick={hendleSelectTheme}>
-					<li className='header__langs-icon'>
-						<i className='fab fa-telegram'></i>
-					</li>
-
-					<li className='header__langs-icon'>
-						<i className='fab fa-twitter'></i>
-					</li>
-				</ul>
+				<ThemeIcon hendleSelectTheme={hendleSelectTheme} />
 
 				<ul className='header__icons'>
 					<li className='header__icon'>
